@@ -17,5 +17,13 @@ class BasePageLocators:
     INPUT_SEARCH = (By.XPATH, '//input[@class="header_search_input tt-hint"]')
     BUTTON_SEARCH = (By.XPATH, '//button[@class="header_search_button trans_300"]')
     LOGO_CASENIK = (By.XPATH, '//div[@class="logo logo-desk"]')
+    XITY = (By.XPATH, '//span[text()="Хиты"]')
+    SKIDKY = (By.XPATH, '//span[text()="Скидки"]')
+    NEW_ITEMS = (By.XPATH, '//span[text()="Новинки"]')
+    SAMSUNG_CAT = (By.XPATH, '//div[text()="Samsung"]')
+    SAMSUNG_J701 = (By.XPATH, '//a[text()="Samsung J701"]')
+    SUBSCRIBE = (By.XPATH, '//button[text()="Подписаться!"]')
+    INPUT_SUBSCRIBE = (By.XPATH, '//input[@name="submail"]')
+    LOGO_FOOTER = (By.XPATH, '//img[@src="images/logo-footer.png"]')
 
-    
+
