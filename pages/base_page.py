@@ -6,7 +6,7 @@ from selenium.common.exceptions import ElementNotInteractableException
 from selenium.common.exceptions import ElementClickInterceptedException
 from selenium.webdriver.support import expected_conditions as EC
 
-from settings import sets
+from ..settings import sets
 import time
 
 
@@ -14,7 +14,7 @@ class BasePage:
     def __init__(self, browser, url):
         self.browser = browser
         self.url = url
-        self.browser.implicitli_wait(sets.IMPLICITLY_WAIT)
+        self.browser.implicitly_wait(sets.IMPLICITLY_WAIT)
 
     def explicit_wait(self, value):
         time.sleep(value)
@@ -71,7 +71,7 @@ class BasePage:
 
     def get_text(self, how, what):
         try: text = self.browser.find_element(how, what).text
-        except NoSuchElementException: return False
+        except NoSuchElementException: return None
         return True
 
     def login_to_cabinet(self, user_name, user_password):
