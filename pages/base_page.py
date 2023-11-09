@@ -37,7 +37,7 @@ class BasePage:
 
     def is_elements_appears_after_while(self, how, what, timeout):
         try:
-            WebDriverWait(self.browser, timeout).until(EC.visibility_of_element_located(how, what))
+            WebDriverWait(self.browser, timeout).until(EC.visibility_of_element_located((how, what)))
         except TimeoutException:
             return False
         return True
