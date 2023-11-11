@@ -215,7 +215,7 @@ class MainPage(base_page.BasePage):
         print(f"{inspect.currentframe().f_code.co_name} - OK")
 
     def subscribe_action(self, email):
-        assert  self.input_data(*locators.BasePageLocators.INPUT_SUBSCRIBE, email), \
+        assert self.input_data(*locators.BasePageLocators.INPUT_SUBSCRIBE, email), \
             "The element footer logo is not present"
         self.explicit_wait(5)
         assert self.click_element(*locators.BasePageLocators.SUBSCRIBE_BUTTON), \

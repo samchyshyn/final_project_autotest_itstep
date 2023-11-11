@@ -71,7 +71,7 @@ class TestMainPage:
         # page.is_elem_newsletter_input()
         page.is_elem_footer_logo()
 
-    def test_main_page_sabscribe_action(self, browser):
+    def test_main_page_subscribe_action(self, browser):
         self.link_to_cabinet = browser.current_url
         page = MainPage(browser, self.link_to_cabinet)
         page.subscribe_action(self.email_for_subscribe)
